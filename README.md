@@ -36,8 +36,10 @@ To run you need three pieces of information:
 From the settings page of the source Subscription (_where you want to copy *from*_)
 *Source Training Key
 *Source Project Id
+*Source Endpoint, if not south central us
 From the settings page of the destination Subscription (_where you want to copy *to*_)
 *Destination Training Key
+*Destination Endpoint, if not south central us
 
 Then run the python script with the necessary information:
 ```Python
