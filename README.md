@@ -1,6 +1,12 @@
+# Utility for moving projects between subscriptions for Microsoft Cognitive Services - Custom Vision service.
+Sample script to copy a Custom Vision project from one Subscription/Region to another.
+
+# Running this script
+
+
 # Project Name
 
-(short, 1-3 sentenced, description of the project)
+Sample script to copy a Custom Vision project from one Subscription/Region to another.
 
 ## Features
 
@@ -14,44 +20,39 @@ This project framework provides the following features:
 
 ### Prerequisites
 
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
+* [Python](https://www.python.org/downloads/)
+* [Pip](https://pip.pypa.io/en/stable/installing/)
 
 ### Installation
 
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
+To run the script you first install the requirements
+```
+pip install -r requirements.txt
+```
 
 ### Quickstart
-(Add steps to get up and running quickly)
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+To run you need three pieces of information:
+From the settings page of the source Subscription (_where you want to copy *from*_)
+*Source Training Key
+*Source Project Id
+From the settings page of the destination Subscription (_where you want to copy *to*_)
+*Destination Training Key
 
+Then run the python script with the necessary information:
+```Python
+python migrate_project.py -p "<project id>" -s "<source training key>" -d "<destination training key>"
+```
 
-## Demo
+This script will recreate a project with the destination training-key and download/upload all of the tags, regions, and images. It will leave you with a new project in your new subscription with no trained iterations, from here you can train a new iteration.
 
-A demo app is included to show how to use the project.
+The migration script assumes you are migrating projects in South Central US. If you need to migrate a project from one region to another then you can specify the endpoints. For example,
+To migrate from South Central US to North Europe:
 
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
+```Python
+python migrate_project.py -p "<project id>" -s "<source training key>" -se "https://southcentralus.api.cognitive.microsoft.com" -d "<destination training key>" -de "https://northeurope.api.cognitive.microsoft.com"
+```
 
 ## Resources
 
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- [Training SDK Documentation] (https://southcentralus.dev.cognitive.microsoft.com/docs/services/Custom_Vision_Training_3.0/operations/5c771cdcbf6a2b18a0c3b7fa)
