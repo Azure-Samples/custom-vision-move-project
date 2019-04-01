@@ -1,4 +1,4 @@
-# Project Name
+# Move Custom Vision Project
 
 Sample script to copy a Custom Vision project from one Subscription/Region to another.
 
