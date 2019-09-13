@@ -1,3 +1,13 @@
+---
+page_type: sample
+languages:
+- python
+products:
+- azure
+description: "Sample script to copy a Custom Vision project from one Subscription/Region to another."
+urlFragment: custom-vision-move-project
+---
+
 # Move Custom Vision Project
 
 Sample script to copy a Custom Vision project from one Subscription/Region to another.
