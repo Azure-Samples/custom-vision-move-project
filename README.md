@@ -8,6 +8,10 @@ description: "Sample script to copy a Custom Vision project from one Subscriptio
 urlFragment: custom-vision-move-project
 ---
 
+# This sample project is deprecated. Please use export/import API provied by Custom Vision to move projects.
+
+
+
 # Move Custom Vision Project
 
 Sample script to copy a Custom Vision project from one Subscription/Region to another.
